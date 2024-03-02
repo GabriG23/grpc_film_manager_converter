@@ -1,0 +1,40 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "registration";
+option java_outer_classname = "RegistrationProto";
+option objc_class_prefix = "RP";
+
+package registration;
+
+// The registration service definition.
+service Registrator {
+      rpc registerClient (ClientRegistrationRequest) returns (ClientRegistrationResponse);
+      rpc getNegotiatedParameters (ClientIdRequest) returns (ClientRegistrationResponse);
+}
+
+// Registration service messages
+message Parameter_pair {
+      string img_type = 1;
+      int32 img_max_size = 2;
+}
+
+// Registration message. I send my clientId and the parameters
+message ClientRegistrationRequest {
+      string client_id = 1;
+      repeated Parameter_pair desired_input_parameters = 2;
+      repeated Parameter_pair desired_output_parameters = 3;
+}
+
+// This request message is for reading the parameters negotiated
+message ClientIdRequest {
+      string client_id = 1;
+}
+
+// This response message is used to both answer the registration and the reading of the parameters
+message ClientRegistrationResponse {
+      bool success = 1;
+      string message = 2;
+      repeated Parameter_pair negotiated_input_parameters = 3;
+      repeated Parameter_pair negotiated_output_parameters = 4;
+}

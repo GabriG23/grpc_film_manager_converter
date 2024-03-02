@@ -1,0 +1,6 @@
+input PNG 1000
+input JPG 5000
+input GIF 2000
+output PNG 8000
+output JPG 4000
+output GIF 1500

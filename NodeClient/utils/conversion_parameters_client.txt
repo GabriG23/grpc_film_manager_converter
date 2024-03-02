@@ -1,0 +1,6 @@
+Client2620290
+input PNG 1000
+output JPG 3500
+input GIF 4000
+output PNG 8000
+input JPG 4000
