@@ -1,12 +1,8 @@
-[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-24ddc0f5d75046c5622901739e7c5dd533143b0c8e959d652212380cedb1ea36.svg)](https://classroom.github.com/a/7vwLpaEp)
-# Exam Call 2
+# gRPC Film Manager Converter
 
 The structure of this repository is the following:
   - "NodeClient" contains the node.js ToDoManager service application, which works as a gRPC client (including documentation for REST APIs and JSON schemas);
   - "JavaServer" contains the Java Converter service application, which works as a gRPC server.
-
-Student:
-- Gabriele Greco - s303435@studenti.polito.it - [github](https://github.com/GabriG23) <br />
 
 # Main Design Choices and assumptions
 
